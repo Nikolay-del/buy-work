@@ -208,3 +208,14 @@ export default gulp.series(
     server,
     watcher
   ));
+
+export const layout = gulp.series(
+  gulp.parallel(
+    html,
+    sprite,
+    createWebp,
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
